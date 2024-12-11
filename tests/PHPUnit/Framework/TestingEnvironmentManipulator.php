@@ -165,7 +165,7 @@ class TestingEnvironmentManipulator implements EnvironmentManipulator
         if ($this->vars->testCaseClass) {
             $testCaseClass = $this->vars->testCaseClass;
             if ($this->classExists($testCaseClass)) {
-                $testCase = new $testCaseClass();
+                $testCase = new $testCaseClass($testCaseClass);
 
                 // Apply DI config from the fixture
                 if (isset($testCaseClass::$fixture)) {

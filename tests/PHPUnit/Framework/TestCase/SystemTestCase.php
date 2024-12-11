@@ -82,7 +82,7 @@ abstract class SystemTestCase extends TestCase
 
     private static $shouldFilterApiResponse = false;
 
-    public function setGroups(array $groups): void
+    public function setTestGroups(array $groups): void
     {
         $pluginName = explode('\\', get_class($this));
         if (!empty($pluginName[2]) && !empty($pluginName[1]) && $pluginName[1] === 'Plugins') {
